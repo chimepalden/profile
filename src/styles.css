@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+/* 
+    You can add global styles to this file, and also import other style files. 
+    Bootstrap need to be locally installed in your project folder.
+*/
+
+/*
+ $ npm install --save bootstrap
+This will also add the bootstrap package to package.json.
+The Bootstrap 4 assets will be installed in the node_modules/bootstrap folder. 
+You'll need to tell Angular where to look for them.
+Next, you also need to install jQuery using the following command:
+
+ $ npm install --save jquery
+ */
+ @import "../node_modules/bootstrap/dist/css/bootstrap";
+
+.navbar {
+   background-color:white;
+}
+
+.body {
+    padding-top: 1rem;
+    background-color: #F8F8F8;
+}
+
+.footer {
+    background-color: rgb(104, 148, 184);
+}
+
+div.banner {
+    color: white;
+    text-align: center;
+    background-color: rgb(191, 220, 243);
+    padding: 2rem;
+    margin-top: 3.5rem;
+}
+
+.icon {
+    padding: 1rem;
+}
+
