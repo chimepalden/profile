@@ -32,7 +32,7 @@ import { FooterComponent } from './footer/footer.component';
     AppRoutingModule,
     // GoogleMapsModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyAuNre_l4nGqY4gP9SeQD-PyGbfuBzB168'
+      apiKey: ''
     })
   ],
   providers: [],
