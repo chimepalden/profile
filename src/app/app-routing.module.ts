@@ -10,7 +10,7 @@ import { ContactComponent } from './contact/contact.component';
 import { EducationComponent } from './education/education.component';
 
 const routes: Routes = [
-  { path: 'chime',
+  { path: 'profile',
     children: [
       { path: '', component: HomeComponent},
       { path: 'resume',
@@ -25,7 +25,7 @@ const routes: Routes = [
       { path: 'about', component: AboutComponent},
     ]
   },
-  { path: '', redirectTo: 'chime', pathMatch: 'full'}
+  { path: '', redirectTo: 'profile', pathMatch: 'full'}
 ];
 
 @NgModule({
