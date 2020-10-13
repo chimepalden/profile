@@ -10,22 +10,18 @@ import { ContactComponent } from './contact/contact.component';
 import { EducationComponent } from './education/education.component';
 
 const routes: Routes = [
-  { path: 'profile',
+  { path: 'home', component: HomeComponent},
+  { path: 'resume',
     children: [
-      { path: '', component: HomeComponent},
-      { path: 'resume',
-        children: [
-          {path: '', component: ResumeComponent},
-          {path: 'academicprojects', component: EducationComponent},
-          {path: 'courses', component: EducationComponent}
-        ]
-      },
-      { path: 'projects', component: ProjectsComponent},
-      { path: 'contact', component: ContactComponent},
-      { path: 'about', component: AboutComponent},
+      {path: '', component: ResumeComponent},
+      {path: 'academicprojects', component: EducationComponent},
+      {path: 'courses', component: EducationComponent}
     ]
   },
-  { path: '', redirectTo: 'profile', pathMatch: 'full'}
+  { path: 'projects', component: ProjectsComponent},
+  { path: 'contact', component: ContactComponent},
+  { path: 'about', component: AboutComponent},
+  { path: '', redirectTo: 'home', pathMatch: 'full'}
 ];
 
 @NgModule({
