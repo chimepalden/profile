@@ -14,24 +14,12 @@ Next, you also need to install jQuery using the following command:
  */
  @import "../node_modules/bootstrap/dist/css/bootstrap";
 
-.navbar {
-   background-color:white;
-}
-
-.body {
-    padding-top: 1rem;
-    background-color: #F8F8F8;
-}
-
-.footer {
-    background-color: rgb(104, 148, 184);
-}
 
 div.banner {
     color: white;
     text-align: center;
     background-color: rgb(191, 220, 243);
-    padding: 2rem;
+    padding: 1rem;
     margin-top: 3.5rem;
 }
 
@@ -39,3 +27,7 @@ div.banner {
     padding: 1rem;
 }
 
+div.body {
+    padding: 1rem;
+    background-color: #F8F8F8;
+}
