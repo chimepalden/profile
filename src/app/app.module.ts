@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { AgmCoreModule} from '@agm/core';
 // import { GoogleMapsModule } from '@angular/google-maps';
 
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
