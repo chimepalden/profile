@@ -11,5 +11,28 @@
                 <i class="fas fa-angle-right"></i><a href='http://getbootstrap.com/'target='_blank'> Bootstrap and CSS</a> for layout and styling.
             </ul>        
         </div>
+        <div class="card maintenance">
+            <div class="card-body">
+                <h5>Note:</h5>
+                <p>The request URL, https://chimepalden.github.io/profile/home returns 404 error while displaying home page.</p>
+                <h5>Possible cause:</h5>
+                <p> A static server routinely returns index.html when it receives a request for "https://www.mysite.com/"; However,
+                    it returns 404 error for deep links unless it is configured to return to index.html instead.
+                </p>
+                <p>The application uses the Angular router and home is component inside the app. So, the requested URL becomes deep link.
+                    The URL is handled by browser itself, outside the running application, the browser makes a direct request to the server,
+                    bypassing the router.
+                </p>
+                <h5>Solution:</h5>
+                <p>
+                    Github Pages server, github.com is a static server and it cannot be configured directly.
+                    404 page is added by creating 404.html file with the copy of index.html content into it.
+                    We will get 404 response but the browser will process the page and it will load the app properly.
+                </p>
+            </div>
+            <div class="card-footer">
+                <p>Detail: https://angular.io/guide/deployment</p> 
+            </div>
+        </div>
     </div>
 </section>
