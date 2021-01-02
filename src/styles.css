@@ -27,7 +27,6 @@ div.banner {
     padding: 1rem;
 }
 
-div.body {
-    padding: 1rem;
+.body {
     background-color: #F8F8F8;
 }
