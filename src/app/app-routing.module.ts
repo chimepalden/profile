@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, Router, NavigationEnd } from '@angular/router';
 
 import { AboutComponent } from './about/about.component';
-import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { ResumeComponent } from './resume/resume.component';
 import { ProjectsComponent } from './projects/projects.component';
@@ -28,4 +27,12 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { 
+  constructor(private router: Router) {
+    this.router.events.subscribe(event => {
+      if(event instanceof NavigationEnd) {
+        window.scrollTo(0,0);
+      }
+    })
+  }
+}
