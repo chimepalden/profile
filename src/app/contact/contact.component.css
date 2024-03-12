@@ -1,7 +1,10 @@
 agm-map {
-    height: 14rem;
+    height: 16rem;
 }
 
 .contact-content {
     padding: 1rem;
+}
+.contact {
+    display: flex;
 }

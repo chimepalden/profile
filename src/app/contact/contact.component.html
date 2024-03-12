@@ -1,40 +1,39 @@
 <section class="contact-content">
     <div class="contact-content banner">
         <h1>Contact</h1>
-        <!-- <p>Home<i class="fas fa-arrow-right"></i>Contact</p> -->
     </div>
     <div class="contact-content body">
         <div class="row">
-            <div class="col-sm-4">
-                <div class="contact d-flex flex-row">
+            <div class="col-lg-4">
+                <div class="contact address">
                     <div class="icon">
                         <i class="fas fa-home"></i>
                     </div>
-                    <div class="address">
+                    <div>
                         <h5>Toronto, Ontario</h5>
                         <p>45 Oakmount Road</p>
                     </div>
                 </div>
-                <div class="contact d-flex flex-row">
+                <div class="contact phone">
                     <div class="icon">
                         <i class="fas fa-phone"></i>
                     </div>
-                    <div class="phone">
+                    <div>
                         <h5>+1 (647) 760 2197</h5>
                         <p>Mon to Fri 9am to 6pm</p>
                     </div>
                 </div>
-                <div class="contact d-flex">
+                <div class="contact email">
                     <div class="icon">
                         <i class="fas fa-envelope"></i>
                     </div>
-                    <div class="email">
+                    <div>
                         <h5>chimepalden@gmail.com</h5>
                         <p>Send us your query anytime.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-8">
+            <div class="col-lg-8">
                 <agm-map [latitude]="lat" [longitude]="lng" [zoom]="15">
                     <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
                 </agm-map>
