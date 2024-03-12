@@ -1,8 +1,4 @@
-nav.navbar {
+nav {
     background-color:white;
-}
-
-.fixed-top {
-    padding-left:5rem;
-    padding-right:5rem; 
+    padding: 0.5rem 1.5rem;
 }
