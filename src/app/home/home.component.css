@@ -1,3 +1,13 @@
+.home-welcome-area {
+    margin-top: 66px;
+    padding: 1rem;
+}
+.home-resume-area {
+    padding: 1rem;
+}
+.home-projects-area {
+    padding: 1rem;
+}
 .home-projects-area .card-header {
     display: flex;
     justify-content: center;
@@ -5,9 +15,13 @@
     background-color: white;
     border: none;
 }
+.home-about-area {
+    padding: 1rem;
+}
 .home-about-area .footer .btn-outline-success {
     margin-left: 10px;
 }
+
 @media (min-width: 576px) {
     .card-body {
         padding: 0;
