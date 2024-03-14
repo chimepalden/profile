@@ -36,11 +36,11 @@
         padding: 0 5px;
     }
     .col-sm-4 .card-body {
-        min-height: 222px;
+        min-height: 180px;
         padding: 0;
     }
     .col-sm-4 .card-title {
-        height: 50px;
+        height: 40px;
     }
 }
 
