@@ -12,6 +12,6 @@
 ## Baseline verification
 - `npm run build`: fails with OpenSSL error under current Node.js.
 - `NODE_OPTIONS=--openssl-legacy-provider npm run build`: succeeds.
-- `NDOE_OPTIONS=--openssl-legacy-provider npm start`: compiles successfully.
+- `NODE_OPTIONS=--openssl-legacy-provider npm start`: compiles successfully.
 - Local site: visually matches the live GitHub Pages site.
 - Existing untracked file: `Profile_info.txt` (preserve).
