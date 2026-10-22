@@ -120,8 +120,11 @@ The OpenSSL compatibility option was applied to this command only.
 
 Following the successful `npm ci`, the original Angular 10 application built successfully using the command recorded above. This confirms that the repaired lockfile supports a clean installation and build with Node.js v20.11.1 and npm 10.2.4.
 
-The installation reported 187 vulnerabilities: 12 low, 78 moderate,
-78 high, and 19 critical. These findings remain outstanding for investigation during the upgrade. No `npm audit fix` command was run.
+The clean installation reported 187 vulnerabilities: 12 low, 78 moderate, 78 high, and 19 critical. A subsequent `npm audit --json` audit on October 22, 2026, reported the same total and severity breakdown.
+
+The matching totals are consistent with the earlier installation output, but the individual findings have not been compared to confirm that they are identical. The JSON report is retained locally as `phase3-npm-audit.json` and excluded from Git tracking.
+
+The findings have not yet been assessed for applicability or remediation. No `npm audit fix` command was run.
 
 ## 8. Final Working Tree Verification
 
@@ -137,11 +140,21 @@ The build did not introduce any reported changes to tracked files.
 
 ## 9. Outstanding Work
 
-1. Inspect the original application's runtime behaviour and relevant tests.
-2. Document any further findings before making dependency changes.
-3. Investigate and document the vulnerabilities reported during installation.
+1. Complete the application runtime and behaviour audit, including manual verification of relevant routes and features.
+2. Assess the existing test failures and determine the appropriate testing strategy for the Angular upgrade.
+3. Investigate the reported dependency vulnerabilities, including their affected packages, applicability, and potential remediation.
 
-The lockfile repair and clean-install validation are complete. Avoid unrelated dependency changes until the remaining baseline audit is complete and the next upgrade step is planned.
+The lockfile repair and clean-install build validation are complete. The initial route and test inspection and dependency vulnerability audit have been documented. The remaining work concerns runtime verification, test assessment, and vulnerability investigation.
+
+### Application Behaviour and Test Audit
+
+The application uses Angular Router with routes for home, resume, academic projects, courses, projects, contact, and about. The root route redirects to home. Navigation completion triggers a scroll to the top of the page.
+
+Nine unit-test spec files contain eleven test cases. Most feature component tests only verify component creation. The root component test still expects the Angular starter-template welcome message, which is absent from the portfolio root template. Its test setup also omits the navigation and footer components used by that template.
+
+The unit-test run did not complete cleanly. It reported the outdated root-template assertion, unknown-element errors for the navigation and footer components, and a Karma/webpack-dev-middleware error involving an undefined range property. The final status of all tests remains unverified.
+
+A legacy Protractor end-to-end test exists, but its execution status has not been verified.
 
 ## 10. Phase 3 Status
 
@@ -156,8 +169,10 @@ The lockfile repair and clean-install validation are complete. Avoid unrelated d
 - [x] Repair the missing lockfile entries without changing `package.json`.
 - [x] Verify a clean installation using `npm ci`.
 - [x] Verify the original Angular 10 build after clean installation.
-- [ ] Complete the remaining application behaviour and test audit.
-- [ ] Investigate and document the reported dependency vulnerabilities.
+- [x] Inspect and document the initial application routes and existing test suite.
+- [x] Record the dependency vulnerability audit results.
+- [ ] Complete manual application runtime and behaviour verification.
+- [ ] Assess the existing test failures and determine the upgrade testing strategy.
+- [ ] Investigate vulnerability applicability and potential remediation.
 
-Phase 3's dependency-installation investigation and baseline build
-validation are complete. The lockfile inconsistency has been repaired, and both a clean installation and the original Angular 10 build succeeded on the laptop. The application behaviour and test audit, along with vulnerability investigation, remain outstanding before the upgrade proceeds.
+Phase 3's lockfile repair, clean-install validation, and baseline build validation are complete. The initial application route and test inspection and the dependency vulnerability audit have been documented. Manual runtime verification, test assessment, and vulnerability investigation remain outstanding before the upgrade proceeds.
