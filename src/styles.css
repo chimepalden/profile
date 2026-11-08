@@ -1,0 +1,23 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+div.banner {
+  color: white;
+  text-align: center;
+  background-color: rgb(191, 220, 243);
+  padding: 1rem;
+  margin-top: 50px;
+}
+
+.icon {
+  padding: 1rem;
+}

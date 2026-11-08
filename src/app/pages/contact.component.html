@@ -1,0 +1,49 @@
+<section class="contact-content">
+    <div class="contact-content banner">
+        <h1>Contact</h1>
+    </div>
+    <div class="contact-content body">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="contact address">
+                    <div class="icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div>
+                        <h5>Toronto, Ontario</h5>
+                        <p>45 Oakmount Road</p>
+                    </div>
+                </div>
+                <div class="contact phone">
+                    <div class="icon" aria-hidden="true">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div>
+                        <h5><a href="tel:+16477602197">+1 (647) 760 2197</a></h5>
+                        <p>Mon to Fri 9am to 6pm</p>
+                    </div>
+                </div>
+                <div class="contact email">
+                    <div class="icon" aria-hidden="true">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h5><a href="mailto:chimepalden@gmail.com">chimepalden@gmail.com</a></h5>
+                        <p>Send us your query anytime.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <google-map
+                    [center]="center"
+                    [zoom]="zoom"
+                    [options]="mapOptions"
+                    width="100%"
+                    height="16rem">
+                    <map-advanced-marker [position]="center" title="Contact location"></map-advanced-marker>
+                </google-map>
+            </div>
+        </div>
+    </div>
+</section>
+
