@@ -1,0 +1,10 @@
+google-map {
+    display: block;
+}
+
+.contact-content {
+    padding: 1rem;
+}
+.contact {
+    display: flex;
+}

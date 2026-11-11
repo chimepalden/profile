@@ -1,27 +1,119 @@
-# Profile
+# Chime Palden — Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
+Personal portfolio website showcasing my background, software development experience, projects, and technical skills.
 
-## Development server
+**Published portfolio:** https://chimepalden.github.io/profile
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+> The Angular 22 migration and GitHub Pages deployment update are currently in progress on the `integration/angular22` branch.
 
-## Code scaffolding
+## Technology Stack
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Framework:** Angular 22
+- **Language:** TypeScript
+- **UI:** HTML5, CSS3, Bootstrap 5
+- **Icons:** Font Awesome
+- **Routing:** Angular standalone components and lazy-loaded routes
+- **Maps:** Angular Google Maps
+- **Testing:** Vitest
+- **Build tools:** Angular CLI and Angular build system
+- **Version control:** Git and GitHub
 
-## Build
+## Application Features
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+- Home page
+- Resume and education pages
+- Projects portfolio
+- About page
+- Contact page with Google Maps integration
+- Responsive navigation and page layouts
+- Lazy-loaded page components
 
-## Running unit tests
+## Application Routes
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+| Route | Page |
+|---|---|
+| `/home` | Home |
+| `/resume` | Resume |
+| `/resume/academicprojects` | Academic Projects / Education |
+| `/resume/courses` | Courses |
+| `/projects` | Projects |
+| `/about` | About |
+| `/contact` | Contact |
 
-## Running end-to-end tests
+The root route redirects to `/home`, and unknown routes also redirect to `/home`.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Getting Started
 
-## Further help
+### Prerequisites
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- Node.js
+- npm
+
+### Installation
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/chimepalden/profile.git
+cd profile
+npm ci
+```
+
+### Development Server
+
+Start the local development server:
+
+```bash
+npm start
+```
+
+Navigate to `http://localhost:4200/`. The application reloads automatically when source files change.
+
+### Unit Tests
+
+Run the unit tests:
+
+```bash
+npm test
+```
+
+The project uses Vitest through the Angular build system.
+
+### Production Build
+
+Build the application for production:
+
+```bash
+npm run build
+```
+
+The generated production files are placed in the Angular CLI output directory under `dist/`.
+
+## GitHub Pages Deployment
+
+The portfolio is published using GitHub Pages from the repository's `master` branch and its `docs/` directory.
+
+The Angular production build is prepared for the repository's deployment path:
+
+```text
+/profile/
+```
+
+The deployment process includes copying the generated browser output into `docs/` and maintaining the GitHub Pages routing fallback.
+
+The Angular 22 deployment update is part of the ongoing Phase 4 integration work.
+
+## Upgrade Documentation
+
+The Angular migration is documented in the repository:
+
+- [Angular Upgrade Baseline](docs/angular-upgrade-baseline.md)
+- [Angular Upgrade Phase 2](docs/angular-upgrade-phase2.md)
+- [Angular Upgrade Phase 3](docs/angular-upgrade-phase3.md)
+- [Angular Upgrade Phase 4](docs/angular-upgrade-phase4.md)
+
+These documents preserve the migration history, technical decisions, implementation details, and deployment planning.
+
+## License
+
+This project is maintained as a personal portfolio.

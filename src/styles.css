@@ -1,28 +1,23 @@
-/* 
-    You can add global styles to this file, and also import other style files. 
-    Bootstrap need to be locally installed in your project folder.
-*/
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import '@fortawesome/fontawesome-free/css/all.min.css';
 
-/*
- $ npm install --save bootstrap
-This will also add the bootstrap package to package.json.
-The Bootstrap 4 assets will be installed in the node_modules/bootstrap folder. 
-You'll need to tell Angular where to look for them.
-Next, you also need to install jQuery using the following command:
+html {
+  scroll-behavior: smooth;
+}
 
- $ npm install --save jquery
- */
- @import "../node_modules/bootstrap/dist/css/bootstrap";
-
+body {
+  margin: 0;
+  background-color: #f4f4f4;
+}
 
 div.banner {
-    color: white;
-    text-align: center;
-    background-color: rgb(191, 220, 243);
-    padding: 1rem;
-    margin-top: 50px;
+  color: white;
+  text-align: center;
+  background-color: rgb(191, 220, 243);
+  padding: 1rem;
+  margin-top: 50px;
 }
 
 .icon {
-    padding: 1rem;
+  padding: 1rem;
 }

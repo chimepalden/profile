@@ -1,0 +1,33 @@
+.projects-content {
+    padding: 1rem;
+}
+.projects-content .body {
+    padding: 10px 0 0;
+}
+.projects-content .card-header {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border: none;
+}
+.projects-content .card-footer {
+    background-color: whitesmoke;
+}
+.projects-content .card-body {
+    padding: 10px;
+}
+
+@media (min-width: 576px) {
+    .projects-content .card-body {
+        min-height: 180px;
+    }
+    .projects-content .card-title {
+        min-height: 40px;
+    }
+}
+
+@media (min-width: 768px) {
+    .projects-content .card-body{
+        min-height: 140px;
+    }
+}

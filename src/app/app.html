@@ -1,0 +1,99 @@
+<div class="app-container">
+  <header class="app-nav">
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" routerLink="/home" aria-label="Home">
+          <img src="assets/images/logo.JPG" width="40" height="40" alt="Logo">
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenuSupport"
+          aria-controls="navmenuSupport"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenuSupport">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/resume" routerLinkActive="active">RESUME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/projects" routerLinkActive="active">PROJECTS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/about" routerLinkActive="active">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/contact" routerLinkActive="active">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="app-body">
+    <router-outlet />
+  </main>
+
+  <footer class="app-footer">
+    <div class="footer-content">
+      <div class="container sponsors">
+        <h5>Sponsors &amp; Partners*</h5>
+        <div class="row sponsorRow d-flex justify-content-center">
+          <img class="img-fluid" src="assets/images/download1.JPG" alt="Sponsor 1">
+          <img class="img-fluid" src="assets/images/download42.JPG" alt="Sponsor 2">
+        </div>
+      </div>
+
+      <div class="footer mb-0">
+        <div class="row justify-content-center">
+          <div class="col-sm-4">
+            <a class="text-light" routerLink="/home"><h6>Home</h6></a>
+            <p>Copyright &copy; 2026 All rights reserved</p>
+          </div>
+
+          <div class="col-sm-4">
+            <h6>Join Us</h6>
+            <p>Stay updated with our latest trends</p>
+            <div class="input-group">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Enter Email address"
+                aria-label="Email address">
+              <button class="btn btn-success" type="button" aria-label="Submit email">
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <h6>Follow Me</h6>
+            <p>Let us be social</p>
+            <a href="https://www.linkedin.com/in/chimepalden/" target="_blank" rel="noopener noreferrer" class="btn-sm" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.facebook.com/batuk100" target="_blank" rel="noopener noreferrer" class="btn-sm" aria-label="Facebook">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" class="btn-sm" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/palden08/" target="_blank" rel="noopener noreferrer" class="btn-sm" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
