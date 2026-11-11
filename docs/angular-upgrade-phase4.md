@@ -6,7 +6,7 @@
 
 ## 1. Objective
 
-Upgrade the existing Angular 10 portfolio to Angular 22 while preserving the original GitHub repository, project history, and live GitHub Pages deployment.
+Modernize the existing Angular 10 portfolio by recreating its functionality in Angular 22 while preserving the original GitHub repository, project history, and live GitHub Pages deployment until the replacement is released.
 
 The implementation strategy changed from a sequential, in-place Angular upgrade to a fresh Angular 22 application scaffold with deliberate recreation of the existing portfolio functionality.
 
@@ -28,11 +28,15 @@ Phase 4 documents:
 
 - Repository: `https://github.com/chimepalden/profile.git`
 - Local repository: `~/workspace/github/profile`
-- Current working branch: `integration/angular22`
+- Current working branch: `develop`
+- Angular 22 integration branch: `integration/angular22`
+- Production branch: `master`
 - Original upgrade branch: `feature/angular-upgrade`
 - Remote: `origin`
 - Phase 3 audit commit: `ac1d49c`
 - Phase 3 baseline commit: `be3499a`
+- Angular 22 integration commit: `fc16f1f`
+- Commit message: `Complete Angular 22 migration and integration`
 
 The original repository and Git history have been retained.
 
@@ -423,24 +427,26 @@ The original Angular 10 deployment remains recoverable from the external backup.
 
 The fresh production build was compared against the prepared `docs/` directory using `diff -qr`. No differences were found in the generated application files. The production `index.html` also matches `docs/index.html`, and `docs/404.html` remains identical to the application index.
 
-### 7.5 Remaining quality assurance
+### 7.5 Outstanding quality assurance and post-release improvements
 
-Before production release:
+#### Before production release:
 
-- [ ] Review Angular 22 code against current Angular conventions.
-- [ ] Review TypeScript strictness and compiler configuration.
-- [ ] Assess additional component and routing tests.
-- [ ] Verify keyboard navigation and accessibility.
-- [ ] Check image alternative text and form labels.
-- [ ] Review color contrast and responsive behavior.
-- [ ] Re-run `npm audit` after final dependency changes, if any.
-- [ ] Review production dependencies.
-- [ ] Check production browser-console errors and failed network requests.
-- [ ] Verify Google Maps API key restrictions and production Map ID.
-- [ ] Verify all routes and functionality in a fresh production build.
-- [ ] Compare the fresh production output against the prepared `docs/` deployment.
-- [ ] Check production asset paths and GitHub Pages base path.
-- [ ] Verify direct navigation and refresh behavior on nested routes.
+- [ ] Verify GitHub Pages deployment after PR merge.
+- [ ] Confirm homepage, primary navigation and major portfolio pages load correctly.
+- [ ] Verify direct route access and refresh behavior.
+- [ ] Confirm production assets, images, styles and fonts load correctly.
+- [ ] Inspect browser console and network requests for critical errors.
+- [ ] Perform a brief responsive and keyboard-navigation smoke test.
+
+#### Post-release quality assurance and improvements:
+
+- [ ] Conduct comprehensive cross-browser and device testing.
+- [ ] Perform detailed accessibility review.
+- [ ] Improve TypeScript strictness and code quality.
+- [ ] Expand unit and integration test coverage.
+- [ ] Review dependency maintenance and security.
+- [ ] Investigate bundle-size optimization opportunities.
+- [ ] Address identified UI, accessibility and performance improvements.
 
 A successful production build is not a substitute for functional, accessibility, and security testing.
 
@@ -455,33 +461,40 @@ The implementation was subsequently integrated into the original Git repository.
 Current integration state:
 
 - Original repository: `profile`
-- Active branch: `integration/angular22`
+- Development branch: `develop`
+- Integration branch: `integration/angular22`
+- Production branch: `master`
+- Integration commit: `fc16f1f` — `Complete Angular 22 migration and integration`
 - Original Git history preserved.
-- Angular 22 source, configuration, dependencies, and assets integrated into the original working tree.
+- Angular 22 source, configuration, dependencies, and assets integrated.
 - README and `.gitignore` updated.
 - Legacy Angular 10 testing and lint configuration removed.
 - GitHub Pages output prepared under `docs/`.
-- Integration changes have not yet been committed or pushed.
-
-The original `master` branch remains the production deployment branch.
+- Integration changes committed and pushed to GitHub.
+- `develop` synchronized with `origin/develop`.
+- Pull request created from `develop` into `master`; final review and approval remain pending.
 
 The following must be preserved:
 
 - Original Git history.
 - Existing release and development branches.
-- `Profile_info.txt`, which remains intentionally untracked.
+- `Profile_info.txt`, which remains intentionally untracked and local.
 - Historical Angular upgrade documentation.
 - External Angular 10 deployment backup.
 
 ### 8.2 Release strategy
 
-The current integration workflow is:
+The current integration and release workflow is:
 
-`feature/angular-upgrade` → `integration/angular22` → final review and validation → approved release → `master` → GitHub Pages.
+`feature/angular-upgrade` → `integration/angular22` → `develop` → Pull Request review and approval → `master` → GitHub Pages verification.
 
-The exact promotion and merge sequence must be reviewed before release.
+The Angular 22 implementation has been committed and pushed to the original repository.
 
-The existing `master`, `develop`, and `v2.0.0` branches must remain protected until the new version is approved.
+The develop branch contains the completed integration commit. A pull request from develop into master has been created for final review.
+
+The production master branch remains unchanged until the pull request is approved and merged.
+
+Existing feature branches and historical release branches are retained for reference and recovery.
 
 The Angular 22 application should be treated as the next portfolio release rather than silently replacing the previous release.
 
@@ -515,42 +528,47 @@ https://angular.dev/tools/cli/deployment
 - [x] Fresh Angular 22 application scaffolded.
 - [x] Main portfolio pages recreated.
 - [x] Core dependencies integrated.
-- [x] Initial browser verification completed.
 - [x] Angular 22 implementation integrated into the original repository working tree.
 - [x] Legacy Angular 10 configuration cleanup completed, including browser-target configuration.
 - [x] README updated.
+- [x] GitHub Pages deployment artifacts prepared.
+- [x] Phase 4 implementation and integration documentation updated.
 
 ### Verification
 
-- [x] Dependency installation verified.
-- [x] Initial unit tests passed.
-- [x] Dependency audit reported zero vulnerabilities.
-- [x] Initial production build completed successfully.
-- [x] Fresh final production build verified.
-- [ ] Angular 22 code-quality review completed.
-- [ ] Additional unit and accessibility testing assessed.
-- [ ] Production browser and route checks completed.
-- [ ] Google Maps production configuration verified.
+- [x] Production build completed successfully.
+- [x] Initial browser verification completed.
+- [x] Main navigation and application tests passed.
+- [x] Production build output compared against GitHub Pages deployment artifacts.
+- [x] Deployment assets and base path prepared.
+- [x] Original Angular 10 deployment artifacts backed up.
 
-### Deployment preparation and release
+### Git integration
+- [x] Integration branch created and synchronized.
+- [x] Angular 22 integration committed and pushed.
+- [x] Changes merged into `develop`.
+- [x] `develop` pushed to remote.
+- [x] Pull request created from `develop` into `master`.
 
-- [x] Original Angular 10 deployment backed up.
-- [x] Angular 22 preview output copied into `docs/`.
-- [x] Angular 22 404 fallback prepared.
-- [x] Base path and Maps placeholder verified.
-- [x] Deployment assets and images verified.
-- [x] Old Angular 10 bundles removed from `docs/`.
-- [x] Upgrade documentation preserved.
-- [x] Fresh production build compared against prepared deployment.
-- [ ] Final Git review completed.
-- [ ] Integration changes committed.
-- [ ] Integration branch pushed.
-- [ ] Release approval and branch promotion completed.
-- [ ] Live GitHub Pages deployment verified.
+### Production release
+- [ ] Pull request reviewed and approved.
+- [ ] Pull request merged into `master`.
+- [ ] GitHub Pages production deployment verified.
+- [ ] Production smoke testing completed.
+- [ ] Production release confirmed.
+
+### Post-release quality assurance
+
+- [ ] Comprehensive cross-browser and device testing completed.
+- [ ] Accessibility review completed.
+- [ ] Additional test coverage and code-quality improvements completed.
+- [ ] Dependency and security review completed.
+- [ ] Performance and bundle-size improvements evaluated.
+- [ ] Outstanding post-release issues addressed or documented.
 
 ## 10. Status and Decision Record
 
-**Status: Angular 22 implementation and repository integration substantially completed. GitHub Pages deployment preparation completed using the successful preview build. Fresh production verification and release remain in progress.**
+**Status: Angular 22 implementation, repository integration, initial verification, and GitHub Pages deployment preparation completed. Integration changes committed and pushed to `develop`. Pull request review, release approval, production deployment and live verification remain pending.**
 
 ### Key architectural decision
 
@@ -582,10 +600,14 @@ The prepared Angular 22 deployment retains the `/profile/` base path, the `key=#
 
 No production release is authorized solely by this document.
 
-Complete the fresh production build, outstanding verification, final Git review, and release approval before replacing the live portfolio.
+The Angular 22 implementation is integrated and available on develop. The pull request into master must undergo final review and receive release approval before merging.
+
+Complete the outstanding quality assurance, verify production configuration (including Google Maps), and confirm the GitHub Pages deployment after release.
+
+The original Angular 10 deployment backup must remain available until the Angular 22 release is successfully verified.
 
 ---
 
 **Document status:** Updated to reflect Angular 22 implementation, repository integration, cleanup, testing, and GitHub Pages deployment preparation.
 
-**Last updated:** November 10, 2026.
+**Last updated:** November 11, 2026.
