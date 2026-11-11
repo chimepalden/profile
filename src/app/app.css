@@ -1,0 +1,44 @@
+:host {
+  display: block;
+}
+
+.app-container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.app-nav,
+.app-body,
+.app-footer {
+  width: 100%;
+}
+
+.app-body {
+  min-height: 70vh;
+  padding-top: 56px;
+  background-color: #f4f4f4;
+}
+
+.sponsors {
+  padding: 1rem;
+}
+.sponsorRow {
+  gap: 1rem;
+}
+.sponsorRow img {
+  max-width: 150px;
+  max-height: 80px;
+  object-fit: contain;
+}
+
+.footer {
+  background-color: rgb(104, 148, 184);
+  padding: 2rem 1rem;
+}
+.footer .row {
+  row-gap: 1.5rem;
+}
+.app-footer {
+  margin-top: auto;
+}
