@@ -4,7 +4,7 @@ Personal portfolio website showcasing my background, software development experi
 
 **Published portfolio:** https://chimepalden.github.io/profile
 
-> The Angular 22 migration and GitHub Pages deployment update are currently in progress on the `integration/angular22` branch.
+> Angular 22 migration completed and deployed to GitHub Pages. The production portfolio is live.
 
 ## Technology Stack
 
@@ -91,17 +91,22 @@ The generated production files are placed in the Angular CLI output directory un
 
 ## GitHub Pages Deployment
 
-The portfolio is published using GitHub Pages from the repository's `master` branch and its `docs/` directory.
+The portfolio is deployed to GitHub Pages:
 
-The Angular production build is prepared for the repository's deployment path:
+Live website: https://chimepalden.github.io/profile/
+
+The Angular 22 production release is deployed from the `master` branch.
+
+The GitHub Actions deployment workflow successfully builds and deploys the application.
+
+The Angular production build is configured for the repository base path:
 
 ```text
 /profile/
 ```
+GitHub Pages routing fallback is maintained to support direct navigation and refreshes on application routes.
 
-The deployment process includes copying the generated browser output into `docs/` and maintaining the GitHub Pages routing fallback.
-
-The Angular 22 deployment update is part of the ongoing Phase 4 integration work.
+The `docs/` directory contains the prepared GitHub Pages deployment artifacts.
 
 ## Upgrade Documentation
 
@@ -112,7 +117,7 @@ The Angular migration is documented in the repository:
 - [Angular Upgrade Phase 3](docs/angular-upgrade-phase3.md)
 - [Angular Upgrade Phase 4](docs/angular-upgrade-phase4.md)
 
-These documents preserve the migration history, technical decisions, implementation details, and deployment planning.
+These documents preserve the migration history, architectural decisions, implementation details, verification results and production deployment record.
 
 ## License
 
