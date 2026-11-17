@@ -91,17 +91,13 @@ The generated production files are placed in the Angular CLI output directory un
 
 ## GitHub Pages Deployment
 
-The portfolio is published using GitHub Pages from the repository's `master` branch and its `docs/` directory.
+The portfolio is deployed to GitHub Pages from the `master` branch using the GitHub Actions deployment workflow:
+- **Deployment source**: `master` branch (docs/ directory)
+- **Production base path**: `/profile/`
+- **Routing**: Custom `404.html` fallback supports direct navigation and page refreshes on Angular routes.
+- **Build output**: Production deployment artifacts are generated in `docs/`.
 
-The Angular production build is prepared for the repository's deployment path:
-
-```text
-/profile/
-```
-
-The deployment process includes copying the generated browser output into `docs/` and maintaining the GitHub Pages routing fallback.
-
-The Angular 22 deployment update is part of the ongoing Phase 4 integration work.
+For details about the hosting configuration, Angular SPA routing and GitHub Pages fallback implementation, see [GitHub Pages Deployment Documentation](docs/github-pages-deployment.md).
 
 ## Upgrade Documentation
 
@@ -111,6 +107,7 @@ The Angular migration is documented in the repository:
 - [Angular Upgrade Phase 2](docs/angular-upgrade-phase2.md)
 - [Angular Upgrade Phase 3](docs/angular-upgrade-phase3.md)
 - [Angular Upgrade Phase 4](docs/angular-upgrade-phase4.md)
+- [GitHub Pages Deployment](docs/github-pages-deployment.md)
 
 These documents preserve the migration history, technical decisions, implementation details, and deployment planning.
 
