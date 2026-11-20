@@ -4,7 +4,7 @@ Personal portfolio website showcasing my background, software development experi
 
 **Published portfolio:** https://chimepalden.github.io/profile
 
-> The Angular 22 migration and GitHub Pages deployment update are currently in progress on the `integration/angular22` branch.
+> Angular 22 migration completed and deployed to GitHub Pages. The production portfolio is live.
 
 ## Technology Stack
 
@@ -109,7 +109,7 @@ The Angular migration is documented in the repository:
 - [Angular Upgrade Phase 4](docs/angular-upgrade-phase4.md)
 - [GitHub Pages Deployment](docs/github-pages-deployment.md)
 
-These documents preserve the migration history, technical decisions, implementation details, and deployment planning.
+These documents preserve the migration history, architectural decisions, implementation details, verification results and production deployment record.
 
 ## License
 

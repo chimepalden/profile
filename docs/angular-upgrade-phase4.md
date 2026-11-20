@@ -431,12 +431,12 @@ The fresh production build was compared against the prepared `docs/` directory u
 
 #### Before production release:
 
-- [ ] Verify GitHub Pages deployment after PR merge.
-- [ ] Confirm homepage, primary navigation and major portfolio pages load correctly.
-- [ ] Verify direct route access and refresh behavior.
-- [ ] Confirm production assets, images, styles and fonts load correctly.
-- [ ] Inspect browser console and network requests for critical errors.
-- [ ] Perform a brief responsive and keyboard-navigation smoke test.
+- [x] Verify GitHub Pages deployment after PR merge.
+- [x] Confirm homepage, primary navigation and major portfolio pages load correctly.
+- [x] Verify direct route access and refresh behavior.
+- [x] Confirm production assets, images, styles and fonts load correctly.
+- [x] Inspect browser console and network requests for critical errors.
+- [x] Perform a brief responsive and keyboard-navigation smoke test.
 
 #### Post-release quality assurance and improvements:
 
@@ -551,11 +551,11 @@ https://angular.dev/tools/cli/deployment
 - [x] Pull request created from `develop` into `master`.
 
 ### Production release
-- [ ] Pull request reviewed and approved.
-- [ ] Pull request merged into `master`.
-- [ ] GitHub Pages production deployment verified.
-- [ ] Production smoke testing completed.
-- [ ] Production release confirmed.
+- [x] Pull request reviewed and approved.
+- [x] Pull request merged into `master`.
+- [x] GitHub Pages production deployment verified.
+- [x] Production smoke testing completed.
+- [x] Angular 22 production release confirmed.
 
 ### Post-release quality assurance
 
@@ -568,7 +568,7 @@ https://angular.dev/tools/cli/deployment
 
 ## 10. Status and Decision Record
 
-**Status: Angular 22 implementation, repository integration, initial verification, and GitHub Pages deployment preparation completed. Integration changes committed and pushed to `develop`. Pull request review, release approval, production deployment and live verification remain pending.**
+**Status: Angular 22 implementation, repository integration, initial verification,GitHub Pages deployment preparation, production deployment and initial production smoke testing completed. Angular 22 is now live on GitHub Pages. Comprehensive post-release quality assurance and remaining production configuration checks are ongoing.**
 
 ### Key architectural decision
 
@@ -610,4 +610,4 @@ The original Angular 10 deployment backup must remain available until the Angula
 
 **Document status:** Updated to reflect Angular 22 implementation, repository integration, cleanup, testing, and GitHub Pages deployment preparation.
 
-**Last updated:** November 11, 2026.
+**Last updated:** November 12, 2026.
