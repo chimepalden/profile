@@ -8,15 +8,8 @@
   padding: 0;
 }
 
-.app-nav,
-.app-body,
-.app-footer {
-  width: 100%;
-}
-
 .app-body {
   min-height: 70vh;
-  padding-top: 56px;
   background-color: #f4f4f4;
 }
 
@@ -34,6 +27,7 @@
 
 .footer {
   background-color: rgb(104, 148, 184);
+  color: #000;
   padding: 2rem 1rem;
 }
 .footer .row {
@@ -42,3 +36,12 @@
 .app-footer {
   margin-top: auto;
 }
+.app-footer .btn-sm {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  min-height: 24px;
+  padding: 0.25rem;
+}
+

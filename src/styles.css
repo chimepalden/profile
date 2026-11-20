@@ -1,6 +1,21 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 @import '@fortawesome/fontawesome-free/css/all.min.css';
 
+:root {
+  --portfolio-info: #087990;
+  --portfolio-success: #146c43;
+}
+
+.btn-outline-info {
+  color: var(--portfolio-info);
+  border-color: var(--portfolio-info);
+}
+
+.btn-outline-success {
+  color: var(--portfolio-success);
+  border-color: var(--portfolio-success);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -10,14 +25,13 @@ body {
   background-color: #f4f4f4;
 }
 
-div.banner {
-  color: white;
+.app-body .banner {
+  color: #212529;
   text-align: center;
   background-color: rgb(191, 220, 243);
   padding: 1rem;
-  margin-top: 50px;
+  margin-top: 10px;
 }
-
-.icon {
-  padding: 1rem;
+.app-body a:not(.btn) {
+  color: var(--portfolio-info);
 }
