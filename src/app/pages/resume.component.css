@@ -1,6 +1,10 @@
 .resume-content {
     padding: 1rem;
 }
+.resume-content .dropdown .btn-link {
+    color: var(--portfolio-info);
+}
+
 @media (max-width: 500px) {
     .resume-content .dropdown.dropend .dropdown-menu {
         top: 100% !important;

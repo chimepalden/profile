@@ -28,6 +28,19 @@ Personal portfolio website showcasing my background, software development experi
 - Responsive navigation and page layouts
 - Lazy-loaded page components
 
+## Accessibility & Inclusive Design
+
+Accessibility and inclusive design were considered throughout the portfolio's UI improvements, with a focus on usability across different devices and interaction methods.
+
+- **Semantic HTML:** Improved heading hierarchy and document structure for clearer content organization.
+- **Keyboard accessibility:** Verified keyboard navigation, logical focus order, visible focus indicators, and keyboard operation of interactive elements.
+- **Screen reader support:** Applied appropriate ARIA attributes and accessible names to help assistive technologies interpret interface elements.
+- **Color contrast:** Reviewed text and interface contrast to improve readability.
+- **Responsive accessibility:** Tested layouts across screen sizes, including text resizing, reflow, and orientation.
+- **WCAG 2.2 AA:** Reviewed applicable success criteria, including relevant criteria introduced in WCAG 2.2.
+
+These improvements support a more accessible, responsive, and inclusive user experience.
+
 ## Application Routes
 
 | Route | Page |
@@ -91,22 +104,13 @@ The generated production files are placed in the Angular CLI output directory un
 
 ## GitHub Pages Deployment
 
-The portfolio is deployed to GitHub Pages:
+The portfolio is deployed to GitHub Pages from the `master` branch using the GitHub Actions deployment workflow:
+- **Deployment source**: `master` branch (docs/ directory)
+- **Production base path**: `/profile/`
+- **Routing**: Custom `404.html` fallback supports direct navigation and page refreshes on Angular routes.
+- **Build output**: Production deployment artifacts are generated in `docs/`.
 
-Live website: https://chimepalden.github.io/profile/
-
-The Angular 22 production release is deployed from the `master` branch.
-
-The GitHub Actions deployment workflow successfully builds and deploys the application.
-
-The Angular production build is configured for the repository base path:
-
-```text
-/profile/
-```
-GitHub Pages routing fallback is maintained to support direct navigation and refreshes on application routes.
-
-The `docs/` directory contains the prepared GitHub Pages deployment artifacts.
+For details about the hosting configuration, Angular SPA routing and GitHub Pages fallback implementation, see [GitHub Pages Deployment Documentation](docs/github-pages-deployment.md).
 
 ## Upgrade Documentation
 
@@ -116,6 +120,7 @@ The Angular migration is documented in the repository:
 - [Angular Upgrade Phase 2](docs/angular-upgrade-phase2.md)
 - [Angular Upgrade Phase 3](docs/angular-upgrade-phase3.md)
 - [Angular Upgrade Phase 4](docs/angular-upgrade-phase4.md)
+- [GitHub Pages Deployment](docs/github-pages-deployment.md)
 
 These documents preserve the migration history, architectural decisions, implementation details, verification results and production deployment record.
 

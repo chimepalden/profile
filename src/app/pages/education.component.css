@@ -1,3 +1,14 @@
 .education-content {
     padding: 1rem;
 }
+.education-content a {
+    text-decoration: none;
+}
+
+.breadcrumb-nav {
+    color: var(--portfolio-info);
+    text-decoration: none;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "/";
+}
