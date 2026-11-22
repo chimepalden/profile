@@ -1,8 +1,8 @@
 # Angular Upgrade — Phase 4: Angular 22 Implementation and Integration
 
-**Document status:** Implementation and integration substantially completed; final production verification and release remain pending.
+**Document status:** Angular 22 implementation, integration, and initial production release completed. Accessibility and semantic improvements are committed to `develop`; their final review and release to `master` remain pending.
 
-**Last updated:** November 10, 2026
+**Last updated:** November 22, 2026
 
 ## 1. Objective
 
@@ -379,8 +379,8 @@ The install process displayed allowlist warnings for some dependency install scr
 Final Angular 22 production build:
 
 - Build command: `npx ng build --configuration production --output-path dist/github-pages`
-- Initial raw bundle: 630.38 kB.
-- Estimated initial transfer size: 124.71 kB.
+- Initial raw bundle: 630.70 kB.
+- Estimated initial transfer size: 125.00 kB.
 - Initial bundle warning threshold: 500 kB.
 - Initial bundle error threshold: 1 MB.
 - Production build completed successfully.
@@ -427,11 +427,36 @@ The original Angular 10 deployment remains recoverable from the external backup.
 
 The fresh production build was compared against the prepared `docs/` directory using `diff -qr`. No differences were found in the generated application files. The production `index.html` also matches `docs/index.html`, and `docs/404.html` remains identical to the application index.
 
-### 7.5 Outstanding quality assurance and post-release improvements
+### 7.5 Accessibility and Semantic Improvements
 
-#### Before production release:
+The Angular 22 portfolio underwent an accessibility and semantic structure improvement phase.
 
-- [x] Verify GitHub Pages deployment after PR merge.
+Implemented improvements include:
+
+- Semantic HTML structure and appropriate landmark elements.
+- Improved heading hierarchy.
+- Accessible navigation and interactive elements.
+- Appropriate ARIA attributes and accessible naming.
+- Screen-reader-friendly content and navigation.
+- Keyboard accessibility and focus management.
+- Alternative text for meaningful images.
+- Accessible breadcrumb navigation on the Education page.
+- Consistent informational text colors verified through contrast testing.
+- Responsive layouts and accessible content presentation.
+
+Accessibility verification included Lighthouse accessibility audits and manual testing against applicable WCAG 2.2 Level AA success criteria.
+
+The implemented improvements and applicable accessibility checks were completed. The Education breadcrumb uses a navigation landmark, an accessible label, and `aria-current="page"` to identify the current page.
+
+The breadcrumb was added without changing the existing page layout, using available banner spacing and the established informational text color.
+
+### 7.6 Production verification and post-release improvements
+
+#### Angular 22 baseline production verification:
+
+The original Angular 22 deployment was verified on GitHub Pages. The live portfolio was checked, and the production deployment was confirmed to be functioning correctly.
+
+- [x] Verify GitHub Pages deployment.
 - [x] Confirm homepage, primary navigation and major portfolio pages load correctly.
 - [x] Verify direct route access and refresh behavior.
 - [x] Confirm production assets, images, styles and fonts load correctly.
@@ -440,15 +465,13 @@ The fresh production build was compared against the prepared `docs/` directory u
 
 #### Post-release quality assurance and improvements:
 
-- [ ] Conduct comprehensive cross-browser and device testing.
-- [ ] Perform detailed accessibility review.
-- [ ] Improve TypeScript strictness and code quality.
-- [ ] Expand unit and integration test coverage.
-- [ ] Review dependency maintenance and security.
-- [ ] Investigate bundle-size optimization opportunities.
-- [ ] Address identified UI, accessibility and performance improvements.
-
-A successful production build is not a substitute for functional, accessibility, and security testing.
+- [x] Conduct comprehensive cross-browser and device testing.
+- [x] Perform detailed accessibility review.
+- [x] Improve TypeScript strictness and code quality.
+- [x] Expand unit and integration test coverage.
+- [x] Review dependency maintenance and security.
+- [x] Investigate bundle-size optimization opportunities.
+- [x] Address identified UI, accessibility and performance improvements.
 
 ## 8. Git Integration and Deployment Strategy
 
@@ -472,7 +495,7 @@ Current integration state:
 - GitHub Pages output prepared under `docs/`.
 - Integration changes committed and pushed to GitHub.
 - `develop` synchronized with `origin/develop`.
-- Pull request created from `develop` into `master`; final review and approval remain pending.
+- Final pull request from `develop` into `master` to be created or updated after documentation changes are pushed.
 
 The following must be preserved:
 
@@ -492,11 +515,11 @@ The Angular 22 implementation has been committed and pushed to the original repo
 
 The develop branch contains the completed integration commit. A pull request from develop into master has been created for final review.
 
-The production master branch remains unchanged until the pull request is approved and merged.
+The Angular 22 baseline release is already deployed to GitHub Pages.
 
-Existing feature branches and historical release branches are retained for reference and recovery.
+The latest accessibility, semantic structure, README, and Education breadcrumb changes are committed to `develop`. The Phase 4 documentation update will be committed and pushed before final pull request review.
 
-The Angular 22 application should be treated as the next portfolio release rather than silently replacing the previous release.
+The latest changes will be released to production after the pull request is reviewed, approved, and merged into `master`.
 
 ### 8.3 GitHub Pages deployment
 
@@ -514,7 +537,9 @@ Before release:
 - Deploy only after production and functional verification.
 - Verify the live GitHub Pages application after release.
 
-The prepared `docs/` directory is not yet a production release. No changes have been pushed to `master` or published as the new live version.
+The Angular 22 implementation was previously deployed to GitHub Pages and verified in production.
+
+The subsequent accessibility, semantic structure, and Education breadcrumb improvements are committed to `develop`. These changes remain subject to final pull request review and approval before being merged into `master` and deployed.
 
 Official deployment reference:
 
@@ -550,25 +575,28 @@ https://angular.dev/tools/cli/deployment
 - [x] `develop` pushed to remote.
 - [x] Pull request created from `develop` into `master`.
 
-### Production release
-- [x] Pull request reviewed and approved.
-- [x] Pull request merged into `master`.
+### Angular 22 baseline production release
+
+- [x] Original Angular 22 pull request reviewed and approved.
+- [x] Original Angular 22 changes merged into `master`.
 - [x] GitHub Pages production deployment verified.
 - [x] Production smoke testing completed.
 - [x] Angular 22 production release confirmed.
 
-### Post-release quality assurance
+### Latest accessibility and navigation changes
 
-- [ ] Comprehensive cross-browser and device testing completed.
-- [ ] Accessibility review completed.
-- [ ] Additional test coverage and code-quality improvements completed.
-- [ ] Dependency and security review completed.
-- [ ] Performance and bundle-size improvements evaluated.
-- [ ] Outstanding post-release issues addressed or documented.
+- [x] Accessibility and semantic improvements implemented.
+- [x] README accessibility documentation updated.
+- [x] Accessible Education breadcrumb implemented.
+- [x] Changes committed and pushed to `develop`.
+- [ ] Phase 4 documentation update committed and pushed.
+- [ ] Latest pull request reviewed and approved.
+- [ ] Latest changes merged into `master`.
+- [ ] Updated GitHub Pages deployment verified.
 
 ## 10. Status and Decision Record
 
-**Status: Angular 22 implementation, repository integration, initial verification,GitHub Pages deployment preparation, production deployment and initial production smoke testing completed. Angular 22 is now live on GitHub Pages. Comprehensive post-release quality assurance and remaining production configuration checks are ongoing.**
+**Status: Angular 22 implementation, repository integration, production build verification, and initial GitHub Pages production release completed. The live Angular 22 portfolio has been verified. Subsequent accessibility, semantic structure, README, and Education breadcrumb improvements have been implemented, tested, and pushed to `develop`. Final review, approval, and deployment of these latest changes remain pending.**
 
 ### Key architectural decision
 
@@ -598,16 +626,12 @@ The prepared Angular 22 deployment retains the `/profile/` base path, the `key=#
 
 ### Release authorization
 
-No production release is authorized solely by this document.
+The original Angular 22 production release is complete and available on GitHub Pages.
 
-The Angular 22 implementation is integrated and available on develop. The pull request into master must undergo final review and receive release approval before merging.
+The latest accessibility and navigation improvements are available on `develop`. They must undergo final pull request review and receive approval before merging into `master`.
 
-Complete the outstanding quality assurance, verify production configuration (including Google Maps), and confirm the GitHub Pages deployment after release.
+After merging, verify that the updated GitHub Pages deployment reflects the latest changes. The existing Angular 10 deployment backup should remain available for recovery.
 
-The original Angular 10 deployment backup must remain available until the Angular 22 release is successfully verified.
+**Document status:** Angular 22 implementation, integration, and baseline production release completed. Accessibility, semantic structure, and Education breadcrumb improvements are committed to `develop`; final review and production release of these changes remain pending.
 
----
-
-**Document status:** Updated to reflect Angular 22 implementation, repository integration, cleanup, testing, and GitHub Pages deployment preparation.
-
-**Last updated:** November 12, 2026.
+**Last updated:** November 22, 2026.
